@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;700&display=swap");
+@font-face {
+  font-family: "Maragsa";
+  src: url("./font/Maragsâ-Display.woff2") format("woff2");
+}
+:root {
+  --white: #f4f4f4;
+  --black: #050505;
+}
+
+body {
+  background-color: black;
+  border: none;
+  padding: none;
+  height: 500vh;
+  margin: 0;
+}
+#sideNav {
+  width: 30vw;
+  height: 100vh;
+  position: fixed;
+  right: -4vw;
+  top: 0;
+  background: #000000;
+  z-index: 2;
+  transition: 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 5vw;
+  /* align-items: center; */
+}
+.inter_font {
+  font-family: "Inter";
+  color: var(--white);
+  line-height: 1.2;
+}
+.mar_font {
+  font-family: "Maragsa", "Perpetua", "Times New Roman", serif;
+}
+
+nav ul li {
+  list-style: none;
+  margin-bottom: 50px;
+  padding: 0;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0;
+}
+.circ1 {
+  background-color: #218323;
+}
+.circ2 {
+  background-color: #f27028;
+}
+.circ3 {
+  background-color: #d27f9a;
+}
+.circ4 {
+  background-color: #2a47a7;
+}
+
+#menuBtn {
+  background-color: none;
+  /* padding: 4px 8px 8px 8px; */
+  line-height: 12px;
+  position: fixed;
+  right: 3vw;
+  top: 3vh;
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Message Text */
+span {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
+}
+.title {
+  font-size: 10rem;
+  color: var(--white);
+  /* align-items: center; */
+  margin-top: 40vh;
+  display: flex; /* set display to flex */
+  justify-content: center; /* center horizontally */
+  align-items: center;
+}
+.h2 {
+  font-size: 10vw;
+  color: var(--white);
+  /* align-items: center; */
+  padding-top: 10vh;
+  display: flex; /* set display to flex */
+  justify-content: center; /* center horizontally */
+  align-items: center;
+}
+.navbar_logo {
+  width: 5rem;
+  height: 5rem;
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--black);
+  text-align: center;
+  line-height: 50px; /* center the text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  position: relative;
+  margin-bottom: 1vh;
+}
+.nav_text {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+}
+.nav_text1 {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+}
+.nav_text1:hover {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+  color: #218323;
+}
+.nav_text2 {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+}
+.nav_text2:hover {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+  color: #f27028;
+}
+.nav_text3 {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+}
+.nav_text3:hover {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+  color: #d27f9a;
+}
+.nav_text4 {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+}
+.nav_text4:hover {
+  /* line-height: 89px; */
+  padding-top: 21px;
+  font-size: 2.5rem;
+  color: #2a47a7;
+}
+
+.nav_num1 {
+  position: absolute; /* make the letter position:absolute */
+  top: -25%; /* adjust as needed */
+}
+.nav_num2 {
+  position: absolute; /* make the letter position:absolute */
+  top: -27%; /* adjust as needed */
+}
+.nav_num3 {
+  position: absolute; /* make the letter position:absolute */
+  top: -30%; /* adjust as needed */
+  left: 30%;
+}
+.nav_num4 {
+  position: absolute; /* make the letter position:absolute */
+  top: -33%; /* adjust as needed */
+}
+article {
+  color: var(--white);
+}
+.bg {
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 1s infinite;
+  opacity: 0.9;
+  visibility: visible;
+}
+
+@keyframes bg-animation {
+  0% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -5%);
+  }
+  20% {
+    transform: translate(-10%, 5%);
+  }
+  30% {
+    transform: translate(5%, -10%);
+  }
+  40% {
+    transform: translate(-5%, 15%);
+  }
+  50% {
+    transform: translate(-10%, 5%);
+  }
+  60% {
+    transform: translate(15%, 0);
+  }
+  70% {
+    transform: translate(0, 10%);
+  }
+  80% {
+    transform: translate(-15%, 0);
+  }
+  90% {
+    transform: translate(10%, 5%);
+  }
+  100% {
+    transform: translate(5%, 0);
+  }
+}
+
+.svg-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  height: 15vh;
+}
+
+svg {
+  position: absolute;
+  /* top: 50%;
+  left: 50%; */
+  transform: translate(-50%, -50%);
+  width: 20vw; /* set width to 20% of viewport width */
+  animation: rotate 12s linear infinite; /* set rotation animation */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* initial rotation angle */
+  }
+  to {
+    transform: rotate(360deg); /* final rotation angle */
+  }
+}
+
+.text_num1 {
+  position: relative;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%) ;
+  color: var(--white);
+  font-size: 10vw;
+  /* line-height: 1.38;
+  vertical-align: bottom; */
+}
+
+
+.num_svg {
+  width: 50vw;
+  height: auto;
+}
+/* .custom-shape {
+  background-color: #239f95;
+  width: 15vw; 
+  font-size: 15vh;
+  color: var(--white);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rotate 8s linear infinite;
+  clip-path: path("M130.194,0.888 C133.902,-0.211 137.849,-0.211 141.557,0.888 L204.293,19.476 C207.982,20.569 211.278,22.703 213.784,25.622 L256.693,75.591 C259.177,78.483 260.782,82.025 261.320,85.800 L270.661,151.359 C271.198,155.124 270.650,158.963 269.082,162.427 L241.833,222.637 C240.254,226.125 237.707,229.087 234.494,231.171 L179.438,266.874 C176.198,268.975 172.418,270.093 168.556,270.093 L103.195,270.093 C99.333,270.093 95.553,268.975 92.313,266.874 L37.257,231.171 C34.044,229.087 31.497,226.125 29.918,222.637 L2.669,162.427 C1.101,158.963 0.553,155.124 1.089,151.359 L10.431,85.800 C10.969,82.025 12.574,78.483 15.057,75.591 L57.967,25.622 C60.473,22.703 63.769,20.569 67.458,19.476 L130.194,0.888 Z");
+}
+.wrapper {
+  position: relative;
+  width: 15vw;
+}
+.num_marker {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+.circle_marker {
+  width: 8vw;
+  height: 8vw;
+  transform: rotate(30deg);
+  text-align: center;
+  line-height: 50px; /* center the text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-bottom: 1vh;
+  transform: rotate(30deg);
+}
+.circ1_mark {
+  background-color: #218323;
+}
+.nav_num1_wrap {
+  position: absolute; /* make the letter position:absolute */
+  transform: rotate(30deg);
+  display: flex;
+  font-size: 12vw;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  line-height: 1.38;
+  margin-bottom: 75%;
+  margin-left: 30%;
+}
