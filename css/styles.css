@@ -75,11 +75,6 @@ nav ul li a {
 }
 
 /* Message Text */
-span {
-  text-align: center;
-  margin-top: 10%;
-  font-size: 4rem;
-}
 .title {
   font-size: 10rem;
   color: var(--white);
@@ -102,7 +97,36 @@ span {
   width: 5rem;
   height: 5rem;
 }
+.email_link {
+  position: relative;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 0 3px;
+  z-index: 1003;
+  animation: 1s ease-out 0s 1 leftAnimation;
+}
+.email_link:after {
+  content: "";
+  position: absolute;
+  background-color: var(--black);
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.email_link:hover {
+  color: var(--black);
+}
+.email_link:hover:after {
+  width: 100%;
+}
 .circle {
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -169,19 +193,31 @@ span {
 .nav_num1 {
   position: absolute; /* make the letter position:absolute */
   top: -25%; /* adjust as needed */
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
 }
 .nav_num2 {
   position: absolute; /* make the letter position:absolute */
   top: -27%; /* adjust as needed */
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
 }
 .nav_num3 {
   position: absolute; /* make the letter position:absolute */
   top: -30%; /* adjust as needed */
   left: 30%;
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
 }
 .nav_num4 {
   position: absolute; /* make the letter position:absolute */
   top: -33%; /* adjust as needed */
+  text-align: center;
+  margin-top: 10%;
+  font-size: 4rem;
 }
 article {
   color: var(--white);
@@ -201,6 +237,14 @@ article {
   opacity: 0.9;
   visibility: visible;
   z-index: 999;
+}
+@keyframes leftAnimation {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes bg-animation {
@@ -251,7 +295,6 @@ svg {
   position: absolute;
   /* top: 50%;
   left: 50%; */
-  transform: translate(-50%, -50%);
   width: 20vw; /* set width to 20% of viewport width */
   animation: rotate 12s linear infinite; /* set rotation animation */
 }
@@ -375,12 +418,16 @@ svg {
   align-items: center;
   padding-left: 10vw;
   padding-right: 10vw;
-  font-size: 0.75rem;
+  font-size: 1vw;
+  color: white;
+  opacity: 0.5;
 }
 .credits {
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: -2px;
   text-align: center;
+  padding-top: 100vh;
+  padding-bottom: none;
 }
 .center {
   display: flex;
@@ -389,7 +436,14 @@ svg {
   flex-direction: column;
 }
 .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
+  width: 100vw;
+  height: 20px;
+  margin-top: 30vh;
+  padding-bottom: 20vh;
 }
 .credit_name {
   font-weight: bold;
@@ -397,5 +451,63 @@ svg {
   font-size: 2rem;
 }
 .text {
-  text-align: center;
+  text-align: center !important;
+}
+.navlink {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  padding: 0 3px;
+  z-index: 1003;
+  animation: 1s ease-out 0s 1 leftAnimation;
+}
+.navlink:after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+.navlink:hover {
+  color: #ffffff;
+}
+.navlink:hover:after {
+  width: 100%;
+}
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.jpean {
+  font-size: 3rem
+}
+.outro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25vw;
+  padding-right: 25vw;
+  font-size: 1.3vw;
+  color: white;
+  opacity: 0.5;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+}
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-weight: 900;
+}
+.email_add {
+  color: var(--black);
+  background-color: rgb(253, 190, 15);
+  width: 30vw;
+  height: 10vh;
 }
