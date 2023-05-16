@@ -15,13 +15,21 @@
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/gsap@3/dist/gsap.min.js" defer></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js" defer></script>
+    <script type="text/javascript" src="test.js" defer></script>
+    <script type="text/javascript" src="./js/gsap.js" defer></script>
+
+
   </head>
   <body>
+    <img src="./img/1.png" alt="" class="con1 confetti">
     <article class="title_page">
       <span class="mar_font title">Para sa Kinabukasan</span>
+      <img src="./img/1.png" alt="" class="con1 confetti">
+
     </article>
-    <div class="bg"></div>
-    <article class="title_page">
+    <!-- <div class="bg"></div> -->
       <nav id="sideNav">
         <ul>
           <li>
@@ -57,28 +65,33 @@
         </ul>
       </nav>
       <article class="intro_quote mar_font">
-        <div class="quote">
-          Education<br />is the passport<br />
-          of the future...
-        </div>
-        <br />
-        <div class="quote_author inter_font">- Malcolm X</div>
-        <p class="excerpt inter_font">
-          “Education” is a word that has captivated the aspirations of
-          Filipinos. The term has been associated with the pursuit of a better
-          future, and has been deeply ingrained in the Filipino culture and
-          values. Education is seen as a means to achieve success, to lift
-          oneself out of poverty, and to contribute to society.
-        </p>
-        <p class="excerpt inter_font">
-          However, the question remains: has the education given to us fully
-          made us change? Have we truly embraced the values and lessons taught
-          to us in the pursuit of knowledge and growth? These are important
-          questions that require introspection and evaluation of our own beliefs
-          and actions. Only then can we truly say that education has changed us
-          for the better.
-        </p>
-        <p>So, how has this word changed our lives</p>
+        <div class="quote_container">
+          <div class="block">
+              <div class="dot"></div>
+              <div class="quote">Education<br>is the passport<br>to the future...</div> 
+             <div class="author">- Malcolm X</div> 
+          </div>
+          <p class="excerpt inter_font">
+                    “Education” is a word that has captivated the aspirations of
+                    Filipinos. The term has been associated with the pursuit of a better
+                    future, and has been deeply ingrained in the Filipino culture and
+                    values. Education is seen as a means to achieve success, to lift
+                    oneself out of poverty, and to contribute to society.
+                  </p>
+                  <p class="excerpt inter_font">
+                    However, the question remains: has the education given to us fully
+                    made us change? Have we truly embraced the values and lessons taught
+                    to us in the pursuit of knowledge and growth?
+                  </p>
+          
+                  <p class="excerpt inter_font">
+                    These are important
+                    questions that require introspection and evaluation of our own beliefs
+                    and actions. Only then can we truly say that education has changed us
+                    for the better.
+                  </p>
+                  <p class="excerpt inter_font">So, how has this word changed our lives</p>
+          </div>
       </article>
       <!-- Menu Button -->
 
@@ -115,6 +128,13 @@
           </div>
         </div>
         <span class="mar_font h2">Understanding<br />the Problem</span>
+        <div class="cards">
+          <div class="card fifth"></div>
+          <div class="card fourth"></div>
+          <div class="card third"></div>
+          <div class="card second"></div>
+          <div class="card first"></div>
+        </div>
       </article>
       <article>
         <div style="position: relative; overflow: visible">
@@ -251,7 +271,6 @@
         </div>
         </div>
       </article>
-    </article>
     <div id="menuBtn">
       <img src="./img/web_logo.png" alt="logo" class="navbar_logo" />
     </div>
