@@ -16,6 +16,7 @@ body {
   padding: none;
   height: 500vh;
   margin: 0;
+  overflow-x: hidden;
 }
 #sideNav {
   width: 30vw;
@@ -224,6 +225,7 @@ nav ul li a {
 }
 article {
   color: var(--white);
+  display: block;
 }
 .bg {
   position: fixed;
@@ -290,7 +292,7 @@ article {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
   height: 15vh;
 }
 
@@ -315,13 +317,12 @@ svg {
   position: relative;
   top: 38%;
   left: 50%;
-  transform: translate(-50%, -50%) ;
+  transform: translate(-50%, -50%);
   color: var(--white);
   font-size: 10vw;
   /* line-height: 1.38;
   vertical-align: bottom; */
 }
-
 
 .num_svg {
   width: 50vw;
@@ -356,6 +357,15 @@ svg {
     transform: rotate(360deg);
   }
 } */
+
+@keyframes confetti_load {
+  0% {
+    width: 0vw;
+  }
+  100% {
+    width: 15vw;
+  }
+}
 .circle_marker {
   width: 8vw;
   height: 8vw;
@@ -388,9 +398,8 @@ svg {
   height: 100vh;
 }
 .intro_quote {
-  height: 100vh;
-  
-  font-size: 10vw;
+  height: 400vh;
+  font-size: 30vw;
 }
 .quote {
   display: flex;
@@ -406,10 +415,22 @@ svg {
   font-size: 3vw;
   /* padding-bottom: 40vh; */
 }
+.separator {
+  height: 1vh;
+  width: auto;
+}
 .excerpt {
-  font-size: 2rem;
+  font-size: 3vw;
   padding-left: 10vw;
   padding-right: 30vw;
+  display: block;
+  font-weight: 900;
+  color: black;
+}
+.excerpt_container {
+  height: auto;
+  background-color: rgb(33, 132, 35);
+  color: var(--black) !important;
 }
 .credit_wallpaper {
   width: 100%;
@@ -426,7 +447,7 @@ svg {
   opacity: 0.5;
 }
 .credits {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   letter-spacing: -2px;
   text-align: center;
   padding-top: 100vh;
@@ -487,7 +508,7 @@ a {
   text-decoration: none;
 }
 .jpean {
-  font-size: 3rem
+  font-size: 3rem;
 }
 .outro {
   display: flex;
@@ -517,45 +538,604 @@ a {
 .block {
   width: 100%;
   height: 100vh;
-  display:grid;
-  grid-template-areas:'main';
-  place-items:center;
+  display: grid;
+  grid-template-areas: "main";
+  place-items: center;
 }
 .dot {
-  grid-area:main;
+  grid-area: main;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: rgb(255,194,0);
+  background-color: rgb(255, 194, 0);
   z-index: 30;
-/*   opacity: 0; */
+  /*   opacity: 0; */
 }
 .quote {
   text-align: center;
   z-index: 300;
-  grid-area:main;
-  font-size: 4rem;
+  grid-area: main;
+  font-size: 7vw;
   font-weight: 900;
-  color: rgb(255,194,0);
-  mix-blend-mode:difference;
+  color: var(--white);
+  mix-blend-mode: difference;
 }
 .author {
-   display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-/*   position: sticky; */
   z-index: 300;
   position: absolute;
-/*   left: 50%; */
-  /* bottom: 10%; */
-  font-size: 1rem;
+  font-size: 2vw;
   color: #f4f4f4;
-/*   padding-bottom: 30vh; */
+  bottom: -50vw;
 }
 .quote_container {
   height: 300vh;
 }
+.spacer1 {
+  height: 70vh;
+  width: auto;
+}
+.con1 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con2 {
+  width: 15vw;
+  height: auto;
+  top: 4vw;
+  left: 2vw;
+  position: absolute;
+  transform: rotate(2deg);
+  animation: confetti_load 2s;
+}
+.con3 {
+  width: 15vw;
+  height: auto;
+  top: 14vw;
+  left: 12vw;
+  position: absolute;
+  transform: rotate(-40deg);
+  animation: confetti_load 2s;
+}
+.con4 {
+  width: 15vw;
+  height: auto;
+  top: 2vw;
+  left: 50vw;
+  position: absolute;
+  transform: rotate(-20deg);
+  animation: confetti_load 2s;
+}
+.con5 {
+  width: 15vw;
+  height: auto;
+  top: 50vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(5deg);
+  animation: confetti_load 2s;
+}
+.con6 {
+  width: 15vw;
+  height: auto;
+  top: 40vw;
+  left: 50vw;
+  position: absolute;
+  transform: rotate(14deg);
+  animation: confetti_load 2s;
+}
+.con7 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con8 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con9 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con10 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con11 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con12 {
+  width: 15vw;
+  height: auto;
+  top: 34vw;
+  left: 32vw;
+  position: absolute;
+  transform: rotate(32deg);
+  animation: confetti_load 2s;
+}
+.con13 {
+  width: 15vw;
+  height: auto;
+  top: 15vw;
+  left: 5vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con14 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 10vw;
+  position: absolute;
+  transform: rotate(5deg);
+  animation: confetti_load 2s;
+}
+
+.con15 {
+  width: 15vw;
+  height: auto;
+  top: 30vw;
+  left: 15vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con16 {
+  width: 15vw;
+  height: auto;
+  top: 25vw;
+  left: 20vw;
+  position: absolute;
+  transform: rotate(0deg);
+  animation: confetti_load 2s;
+}
+
+.con17 {
+  width: 15vw;
+  height: auto;
+  top: 35vw;
+  left: 25vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+
+.con18 {
+  width: 15vw;
+  height: auto;
+  top: 40vw;
+  left: 30vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+
+.con19 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 35vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con20 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 40vw;
+  position: absolute;
+  transform: rotate(10deg);
+  animation: confetti_load 2s;
+}
+
+.con21 {
+  width: 15vw;
+  height: auto;
+  top: 5vw;
+  left: 45vw;
+  position: absolute;
+  transform: rotate(-20deg);
+  animation: confetti_load 2s;
+}
+.con22 {
+  width: 15vw;
+  height: auto;
+  top: 15vw;
+  left: 50vw;
+  position: absolute;
+  transform: rotate(15deg);
+  animation: confetti_load 2s;
+}
+
+.con23 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 0;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con7 {
+  width: 15vw;
+  height: auto;
+  top: 15vw;
+  left: 25vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con8 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 35vw;
+  position: absolute;
+  transform: rotate(15deg);
+  animation: confetti_load 2s;
+}
+
+.con9 {
+  width: 15vw;
+  height: auto;
+  top: 30vw;
+  left: 45vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+.con10 {
+  width: 15vw;
+  height: auto;
+  top: 5vw;
+  left: 40vw;
+  position: absolute;
+  transform: rotate(10deg);
+  animation: confetti_load 2s;
+}
+
+.con11 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 20vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+
+.con12 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 30vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con24 {
+  width: 15vw;
+  height: auto;
+  top: 35vw;
+  left: 15vw;
+  position: absolute;
+  transform: rotate(-20deg);
+  animation: confetti_load 2s;
+}
+.con25 {
+  width: 15vw;
+  height: auto;
+  top: 15vw;
+  left: 85vw;
+  position: absolute;
+  transform: rotate(10deg);
+  animation: confetti_load 2s;
+}
+.con26 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 60vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+
+.con27 {
+  width: 15vw;
+  height: auto;
+  top: 25vw;
+  left: 70vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+
+.con28 {
+  width: 15vw;
+  height: auto;
+  top: 30vw;
+  left: 55vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con29 {
+  width: 15vw;
+  height: auto;
+  top: 35vw;
+  left: 80vw;
+  position: absolute;
+  transform: rotate(15deg);
+  animation: confetti_load 2s;
+}
+
+.con30 {
+  width: 15vw;
+  height: auto;
+  top: 40vw;
+  left: 50vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+.con31 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 75vw;
+  position: absolute;
+  transform: rotate(10deg);
+  animation: confetti_load 2s;
+}
+
+.con32 {
+  width: 15vw;
+  height: auto;
+  top: 50vw;
+  left: 60vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con33 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 80vw;
+  position: absolute;
+  transform: rotate(5deg);
+  animation: confetti_load 2s;
+}
+
+.con34 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 65vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+.con35 {
+  width: 15vw;
+  height: auto;
+  top: 30vw;
+  left: 90vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+.con36 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 55vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+
+.con37 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 70vw;
+  position: absolute;
+  transform: rotate(15deg);
+  animation: confetti_load 2s;
+}
+
+.con38 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 85vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con39 {
+  width: 15vw;
+  height: auto;
+  top: 35vw;
+  left: 60vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+.con40 {
+  width: 15vw;
+  height: auto;
+  top: 50vw;
+  left: 75vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con41 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 80vw;
+  position: absolute;
+  transform: rotate(5deg);
+  animation: confetti_load 2s;
+}
+
+.con42 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 65vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
+.con43 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 90vw;
+  position: absolute;
+  transform: rotate(20deg);
+  animation: confetti_load 2s;
+}
+
+.con44 {
+  width: 15vw;
+  height: auto;
+  top: 35vw;
+  left: 50vw;
+  position: absolute;
+  transform: rotate(-5deg);
+  animation: confetti_load 2s;
+}
+
+.con45 {
+  width: 15vw;
+  height: auto;
+  top: 50vw;
+  left: 75vw;
+  position: absolute;
+  transform: rotate(10deg);
+  animation: confetti_load 2s;
+}
+.con46 {
+  width: 15vw;
+  height: auto;
+  top: 20vw;
+  left: 60vw;
+  position: absolute;
+  transform: rotate(-15deg);
+  animation: confetti_load 2s;
+}
+
+.con47 {
+  width: 15vw;
+  height: auto;
+  top: 45vw;
+  left: 80vw;
+  position: absolute;
+  transform: rotate(5deg);
+  animation: confetti_load 2s;
+}
+
+.con48 {
+  width: 15vw;
+  height: auto;
+  top: 10vw;
+  left: 65vw;
+  position: absolute;
+  transform: rotate(-10deg);
+  animation: confetti_load 2s;
+}
+
 .confetti {
-  width: 50px;
+  z-index: 500;
+}
+.confetti_container {
+  position: relative;
+  height: 100vh;
+}
+.cards {
+  position: relative;
+  height: 60vh;
+  width: 50vw;
+}
+.card {
+  border-radius: 2rem;
+  position: absolute;
+  inset: 0;
+}
+
+.first {
+  background: lightblue;
+  z-index: 1;
+}
+.second {
+  background: lightgreen;
+  top: 5vh;
+  z-index: 2;
+}
+.third {
+  background: lightgray;
+  top: 10vh;
+  z-index: 3;
+}
+.fourth {
+  background: blue;
+  top: 15vh;
+  z-index: 4;
+}
+.fifth {
+  background: red;
+  top: 20vh;
+  z-index: 5;
 }

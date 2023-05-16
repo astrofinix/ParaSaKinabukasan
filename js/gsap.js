@@ -1,34 +1,36 @@
+var dot = document.getElementById("dot");
 gsap.registerPlugin(ScrollTrigger);
 
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: ".dot",
-    start: "center center",
-    end: "+=100%",
-    scrub: true,
-    pin: true,
-  },
-});
-
-tl.to(dot, {
-  scale: "10",
-  backgroundColor: "rgb(255,194,0)",
-}).to(dot, {
-  scale: "30",
-  backgroundColor: "#f4f4f4",
-}).to(dot, {
-  scale: "50",
-  backgroundColor: "#f4f4f4",
-}).to(dot, {
-  scale: "50",
-  backgroundColor: "#f4f4f4",
-}).to(dot, {
-  scale: "90",
-  backgroundColor: "rgb(33, 132, 35)",
-});
-
-
-
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".dot",
+          start: "center center",
+          end: "+=100%",
+          scrub: true,
+          pin: true,
+        },
+      });
+      tl.to(dot, {
+        scale: "10",
+        backgroundColor: "rgb(255,194,0)",
+      });
+      tl.to(dot, {
+        scale: "30",
+        backgroundColor: "#f4f4f4",
+      });
+      tl.to(dot, {
+        scale: "50",
+        backgroundColor: "#f4f4f4",
+      });
+      tl.to(dot, {
+        scale: "50",
+        backgroundColor: "#f4f4f4",
+      });
+      tl.to(dot, {
+        scale: "90",
+        backgroundColor: "rgb(33, 132, 35)",
+      });
+      
 const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".cards",
