@@ -15,3 +15,5 @@ document.querySelectorAll(".confetti").forEach((el) => {
     el.style.opacity = 0;
   });
 });
+
+// f

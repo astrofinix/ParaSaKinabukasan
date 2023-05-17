@@ -1,35 +1,52 @@
-var dot = document.getElementById("dot");
 gsap.registerPlugin(ScrollTrigger);
 
-      let tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".dot",
-          start: "center center",
-          end: "+=100%",
-          scrub: true,
-          pin: true,
-        },
-      });
-      tl.to(dot, {
-        scale: "10",
-        backgroundColor: "rgb(255,194,0)",
-      });
-      tl.to(dot, {
-        scale: "30",
-        backgroundColor: "#f4f4f4",
-      });
-      tl.to(dot, {
-        scale: "50",
-        backgroundColor: "#f4f4f4",
-      });
-      tl.to(dot, {
-        scale: "50",
-        backgroundColor: "#f4f4f4",
-      });
-      tl.to(dot, {
-        scale: "90",
-        backgroundColor: "rgb(33, 132, 35)",
-      });
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".dot",
+    start: "center center",
+    end: "+=100%",
+    scrub: true,
+    pin: false,
+    opacity: 1,
+    zIndex:100,
+    pinSpacing: false,
+  },
+});
+
+let author = document.querySelector(".author");
+let dot = document.querySelector(".dot");
+let page_intro = document.querySelector(".intro_quote");
+
+tl.to(dot, {
+  scale: "50",
+  opacity: 1,
+  backgroundColor: "rgb(255, 194, 0)",
+}).to(author, {
+  color: "#040404",
+});
+
+tl.to(dot, {
+  scale: "100",
+  backgroundColor: "#f4f4f4",
+})
+tl.to(dot, {
+  scale: "300",
+  backgroundColor: "#f4f4f4",
+});
+
+tl.to(dot, {
+  backgroundColor: "#f4f4f4",
+});
+
+tl.to(dot, {
+  backgroundColor: "rgb(33, 132, 35)",
+}).to(page_intro, {
+  backgroundColor: "rgb(33, 132, 35)",
+});
+
+
+dot.style.position = "relative";
+
       
 const tl1 = gsap.timeline({
     scrollTrigger: {
