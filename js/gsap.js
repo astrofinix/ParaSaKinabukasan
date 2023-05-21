@@ -30,7 +30,7 @@ tl.to(dot, {
   backgroundColor: "#f4f4f4",
 })
 tl.to(dot, {
-  scale: "300",
+  scale: "250",
   backgroundColor: "#f4f4f4",
 });
 
