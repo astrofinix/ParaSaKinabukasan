@@ -52,3 +52,9 @@ if ($('#back-to-top').length) {
     }, 700);
   });
 }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  document.getElementById("desktop-view").style.display = "block";
+  document.body.style.overflow = "hidden";
+} else {
+  // For non-mobile devices, do nothing
+}
