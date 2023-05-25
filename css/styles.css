@@ -93,14 +93,15 @@ nav ul li a {
 }
 .h2 {
   font-size: 10vw;
-  color: var(--white);
   /* align-items: center; */
-  padding-top: 10vh;
+  padding-top: 15vh;
   display: flex; /* set display to flex */
   justify-content: center; /* center horizontally */
   align-items: center;
   text-align: center;
   color: var(--black);
+  letter-spacing: 0.1px;
+  text-transform: uppercase;
 }
 .navbar_logo {
   width: 5rem;
@@ -398,6 +399,7 @@ svg {
   line-height: 1.38;
   margin-bottom: 75%;
   margin-left: 30%;
+  z-index: 503;
 }
 .nav_num1_1_wrap {
   position: absolute; /* make the letter position:absolute */
@@ -422,6 +424,9 @@ svg {
   line-height: 1.38;
   margin-bottom: 18%;
   margin-left: 13%;
+}
+.hidden {
+  opacity: 0;
 }
 .nav_num2_1_wrap {
   position: absolute; /* make the letter position:absolute */
@@ -509,7 +514,13 @@ svg {
 .separator4 {
   height: 75vh;
   width: auto;
-  background-color: #218323;
+  background-color: #d4809b;
+  opacity: 1;
+}
+.separator4_1 {
+  height: 75vh;
+  width: auto;
+  background-color: rgb(33, 132, 35);
   opacity: 1;
 }
 .separator5 {
@@ -637,11 +648,13 @@ svg {
   position: absolute;
   margin-top: 20vw;
   margin-left: 30vw;
+  margin-bottom: 70vw;
+  margin-right: 30vw;
   z-index: 40;
 }
 .comp2 {
   position: absolute;
-  margin-top: 60vw;
+  margin-top: 62vw;
   margin-left: 10vw;
   z-index: 38;
 }
@@ -767,7 +780,6 @@ svg {
   width: 100%;
 }
 a {
-  color: #ffffff;
   text-decoration: none;
 }
 .jpean {
@@ -1751,14 +1763,15 @@ a {
 }
 .animation1 {
   position: relative;
-  height: 130vh;
+  height: 155vh;
   background-color: #218323;
 }
+
 .ch1_wallpaper {
   position: absolute;
   width: 100vw;
   height: auto;
-  z-index: 1;
+  z-index: 6;
 }
 .armpad {
   position: absolute;
