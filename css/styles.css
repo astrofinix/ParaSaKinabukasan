@@ -120,6 +120,13 @@ nav ul li a {
   width: 5rem;
   height: 5rem;
 } 
+.webview_logo {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+}
 .email_link {
   position: relative;
   text-decoration: none;
@@ -821,7 +828,7 @@ a {
   align-items: center;
   padding-left: 25vw;
   padding-right: 25vw;
-  font-size: 2vw;
+  font-size: 6vw;
   color: white;
   opacity: 0.5;
   padding-top: 10vh;
