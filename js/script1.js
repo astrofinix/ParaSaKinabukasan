@@ -1,9 +1,11 @@
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   document.getElementById("desktop-view").style.display = "block";
+  document.getElementById("sideNav").style.display = "none";
   document.body.style.overflow = "hidden";
   console.log("laptop/desktop browser");
 } else {
   console.log("REDIRECT");
+  document.getElementById("sideNav").style.display = "block";
   // For non-mobile devices, do nothing
 }
 
