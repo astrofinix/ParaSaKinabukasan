@@ -3,9 +3,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
   document.getElementById("navbar_logo").style.display = "none";
   document.getElementById("sideNav").style.display = "none";
   document.body.style.overflow = "hidden";
-  console.log("laptop/desktop browser");
+  document.addEventListener('touchmove', function(event) {
+    event.preventDefault();
+  }, { passive: false });
+  console.log("mobile --> redirect");
 } else {
-  console.log("REDIRECT");
+  console.log("proceed");
   document.getElementById("desktop-view").style.display = "none";
   document.getElementById("navbar_logo").style.display = "block";
   document.getElementById("sideNav").style.display = "block";
