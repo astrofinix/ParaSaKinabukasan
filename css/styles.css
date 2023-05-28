@@ -666,8 +666,8 @@ svg {
   position: relative;
   background-color: var(--black);
 }
-#desktop-view {
-  display: flex;
+.desktop-view {
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -675,7 +675,7 @@ svg {
   height: 100vh; /* Adjust the height as needed */
 }
 
-#desktop-view .webview_logo {
+.desktop-view .webview_logo {
   padding-top: 30vh;
   width: 40vw;
   max-width: 100%;
