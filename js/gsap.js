@@ -164,7 +164,7 @@ const tl1 = gsap.timeline({
       start: "center center",
       end: "+=100%",
       scrub: true,
-      pin: false,
+      pin: true,
       opacity: 1,
       zIndex:100,
       pinSpacing: false,
@@ -262,6 +262,74 @@ const tl1 = gsap.timeline({
   tl9.to(excerpt4, {
     opacity: 1,
   });
+
+  let bg_scroll = document.querySelector(".scroll_pane");
+  let circ_scroll = document.querySelector(".circle_scroll");
+  let arrow1 = document.querySelector(".arrow1");
+  let arrow2 = document.querySelector(".arrow2");
+  let arrow3 = document.querySelector(".arrow3");
+
+  // let tl11 = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".scroller1",
+  //     start: "center center",
+  //     end: "+=100%",
+  //     scrub: false,
+  //     pin: true,
+  //     opacity: 1,
+  //     zIndex:100,
+  //     pinSpacing: false,
+  //   },
+  // });
+  tl11.to(arrow1, {
+    display: "block",
+  });
+
+  // tl11.to(bg_scroll, {
+  //   backgroundColor: "rgb(43, 73, 172)",
+  // }).to(circ_scroll, {
+  //   backgroundColor: "rgb(253,190,15)",
+  // }).to(arrow1, {
+  //   display: "none",
+  // }).to(arrow2, {
+  //   display: "block",
+  // }); 
+  tl11.to(arrow1, {
+    display: "block",
+    duration: 0,
+  });
+  
+  // tl11.to(arrow1, {
+  //   display: "block",
+  // }).to([bg_scroll, circ_scroll, arrow2], {
+  //   display: "block",
+  //   backgroundColor: ["rgb(43, 73, 172)", "rgb(253, 190, 15)", "rgb(210, 127, 154)"],
+  //   duration: 1,
+  //   delay: -1, // Delay the start of the animation by -1 second to sync with the arrow1 animation
+  // });
+  
+  // tl11.to(arrow1, {
+  //   display: "none",
+  // }).to(arrow3, {
+  //   display: "block",
+  //   duration: 2,
+  // });
+  
+  // tl11.to(bg_scroll, {
+  //   backgroundColor: "rgb(210, 127, 154)",
+  //   duration: 2,
+  // }).to(circ_scroll, {
+  //   backgroundColor: "rgb(33,132,35)",
+  //   duration: 2,
+  // }).to(arrow2, {
+  //   display: "none",
+  //   duration: 2,
+  // }).to(arrow3, {
+  //   display: "block",
+  //   duration: 2,
+  // });
+  console.log("TEST");
+
   let tl10 = gsap.timeline({
     scrollTrigger: {
       trigger: ".comp1",
