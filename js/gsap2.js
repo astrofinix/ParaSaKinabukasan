@@ -21,24 +21,23 @@ window.onload = function () {
     // rotation: 90,
     // transformOrigin: "center",
   });
-
+  let excerpt1_1 = document.querySelector(".excerpt1_1");
   let tl19 = gsap.timeline({
     scrollTrigger: {
       trigger: ".excerpt1_1",
       start: "bottom bottom",
-      end: "+=10%",
+      end: "+=20%",
       scrub: true,
-      pin: true,
+      pin: false,
       opacity: 1,
       zIndex: 100,
       pinSpacing: false,
     },
   });
 
-  let crisis = document.querySelector(".crisis");
-  tl19.to(crisis, {
-    display: "block",
-    scale: 1.1,
+  tl19.to(excerpt1_1, {
+    opacity: 1,
+    ease: "power2.out", 
   });
 
 
