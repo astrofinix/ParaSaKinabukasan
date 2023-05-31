@@ -1,5 +1,5 @@
 gsap.registerPlugin(ScrollTrigger);
-
+// QUOTE INTRO
 let tl = gsap.timeline({
   scrollTrigger: {
     trigger: ".dot",
@@ -45,10 +45,193 @@ tl.to(dot, {
   backgroundColor: "rgb(33, 132, 35)",
 });
 
+// INTRO EXCERPT
 
 dot.style.position = "relative";
+let tl6 = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".excerpt1",
+    start: "bottom bottom",
+    end: "center center", 
+    scrub: true,
+    scrub: true,
+    pin: false,
+    opacity: 1,
+    zIndex: 100,
+    pinSpacing: false,
+    onComplete: function () {
+      tl7.play(); // Start the next timeline when tl6 is complete
+    },
+  },
+});
 
-      
+let tl7 = gsap.timeline({
+  paused: true, // Set the timeline to initially paused
+  scrollTrigger: {
+    trigger: ".excerpt2",
+    start: "bottom bottom",
+    end: "center center", 
+    scrub: true,
+    pin: false,
+    opacity: 1,
+    zIndex: 100,
+    pinSpacing: false,
+    onComplete: function () {
+      tl8.play(); // Start the next timeline when tl7 is complete
+    },
+  },
+});
+
+let tl8 = gsap.timeline({
+  paused: true, // Set the timeline to initially paused
+  scrollTrigger: {
+    trigger: ".excerpt3",
+    start: "bottom bottom",
+    end: "center center", 
+    scrub: true,
+    pin: false,
+    opacity: 1,
+    zIndex: 100,
+    pinSpacing: false,
+    onComplete: function () {
+      tl9.play(); // Start the next timeline when tl8 is complete
+    },
+  },
+});
+
+let tl9 = gsap.timeline({
+  paused: true, // Set the timeline to initially paused
+  scrollTrigger: {
+    trigger: ".excerpt4",
+    start: "bottom bottom",
+    end: "center center", 
+    scrub: true,
+    pin: false,
+    opacity: 1,
+    zIndex: 100,
+    pinSpacing: false,
+  },
+});
+
+let excerpt1 = document.querySelector(".excerpt1");
+let excerpt2 = document.querySelector(".excerpt2");
+let excerpt3 = document.querySelector(".excerpt3");
+let excerpt4 = document.querySelector(".excerpt4");
+
+tl6.to(excerpt1, {
+  opacity: 1,
+});
+
+tl7.to(excerpt2, {
+  opacity: 1,
+});
+
+tl8.to(excerpt3, {
+  opacity: 1,
+});
+
+tl9.to(excerpt4, {
+  opacity: 1,
+});
+
+  // CH1 ANIMATION
+  let tl5 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".dot_animation1",
+      start: "center center",
+      end: "+=100%",
+      scrub: true,
+      pin: true,
+      opacity: 1,
+      zIndex:100,
+      pinSpacing: false,
+    },
+  });
+  
+  // let author = document.querySelector(".author");
+  let dot2 = document.querySelector(".dot_animation1");
+
+  tl5.to(dot2, {
+    scale: 2,
+  });
+
+  // last place animation
+  let tl15 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".rank_animation",
+      start: "bottom bottom",
+      end: "+=20%",
+      scrub: true,
+      pin: false,
+      opacity: 1,
+      zIndex:100,
+      pinSpacing: false,
+    },
+  });
+  
+  // let author = document.querySelector(".author");
+  let rank1 = document.querySelector(".ranking1");
+  let rank2 = document.querySelector(".ranking2");
+
+  tl15.add('start')
+  .to(rank1, {
+    x: "80vh",
+    delay: 0,
+  }, 'start')
+  .to(rank2, {
+    x: "-90vh",
+    delay: 0,
+  }, 'start');
+  // briones animation
+  let tl16 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".briones",
+      start: "top top",
+      end: "+=10%",
+      scrub: true,
+      pin: false,
+      opacity: 1,
+      zIndex:100,
+      pinSpacing: false,
+    },
+  });
+  
+  // let author = document.querySelector(".author");
+  let briones = document.querySelector(".briones");
+  tl16.to(".briones", {
+    y: "-80vh",
+  });
+
+  tl15.add('start')
+  .to(rank1, {
+    x: "80vh",
+    delay: 0,
+  }, 'start')
+  .to(rank2, {
+    x: "-90vh",
+    delay: 0,
+  }, 'start');
+  //pandemic animation
+  let tl17 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".pandemic",
+      start: "top top",
+      end: "+=10%",
+      scrub: true,
+      pin: false,
+      opacity: 1,
+      zIndex:100,
+      pinSpacing: false,
+    },
+  });
+  
+  // let author = document.querySelector(".author");
+  let pandemic = document.querySelector(".pandemic");
+  tl16.to(".pandemic", {
+    scale: 1.5,
+    rotation: 180,
+  });
+// CARDS
 const tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: ".cards",
@@ -79,8 +262,98 @@ const tl1 = gsap.timeline({
       document.querySelector('.cards').style.display = 'none';
     }
   });
+  const tl12 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".cards2",
+      pin: true,
+      start: "top 10%",
+      end: "bottom+=1000 bottom",
+      scrub: true
+    }
+  });
+  
+  tl12.to(".fifth2", {
+    y: "100vh",
+    delay: -0.2
+  }).to(".fourth2", {
+    y: "95vh",
+    delay: -0.2
+  }).to(".third2", {
+    y: "90vh",
+    delay: -0.2
+  }).to(".second2", {
+    y: "85vh",
+    delay: -0.2
+  }).to(".cards2 .second2, .cards2 .third2, .cards2 .fourth2, .cards2 .fifth2", {
+    opacity: 0,
+    duration: 1,
+    delay: -0.2,
+    onComplete: () => {
+      document.querySelector('.cards').style.display = 'none';
+    }
+  });
+  const tl13 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".cards3",
+      pin: true,
+      start: "top 10%",
+      end: "bottom+=1000 bottom",
+      scrub: true
+    }
+  });
+  
+  tl13.to(".fifth3", {
+    y: "100vh",
+    delay: -0.2
+  }).to(".fourth3", {
+    y: "95vh",
+    delay: -0.2
+  }).to(".third3", {
+    y: "90vh",
+    delay: -0.2
+  }).to(".second3", {
+    y: "85vh",
+    delay: -0.2
+  }).to(".cards3 .second3, .cards3 .third3, .cards3 .fourth3, .cards3 .fifth3", {
+    opacity: 0,
+    duration: 1,
+    delay: -0.2,
+    onComplete: () => {
+      document.querySelector('.cards').style.display = 'none';
+    }
+  });
+  const tl14 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".cards4",
+      pin: true,
+      start: "top 10%",
+      end: "bottom+=1000 bottom",
+      scrub: true
+    }
+  });
+  
+  tl14.to(".fifth4", {
+    y: "100vh",
+    delay: -0.2
+  }).to(".fourth4", {
+    y: "95vh",
+    delay: -0.2
+  }).to(".third4", {
+    y: "90vh",
+    delay: -0.2
+  }).to(".second4", {
+    y: "85vh",
+    delay: -0.2
+  }).to(".cards4 .second4, .cards4 .third4, .cards4 .fourth4, .cards4 .fifth4", {
+    opacity: 0,
+    duration: 1,
+    delay: -0.2,
+    onComplete: () => {
+      document.querySelector('.cards').style.display = 'none';
+    }
+  });
 
-
+  // BLOCK QUESTION
   let tl2 = gsap.timeline({
     scrollTrigger: {
       trigger: ".block_question",
@@ -124,6 +397,9 @@ const tl1 = gsap.timeline({
     display: "block",
   });
 
+
+  // CH2 ANIMATION
+
   let tl4 = gsap.timeline({
     scrollTrigger: {
       trigger: ".dot_animation2",
@@ -158,110 +434,8 @@ const tl1 = gsap.timeline({
     y: 200,
     ease: "power2.out"
   });
-  let tl5 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".dot_animation1",
-      start: "center center",
-      end: "+=100%",
-      scrub: true,
-      pin: true,
-      opacity: 1,
-      zIndex:100,
-      pinSpacing: false,
-    },
-  });
-  
-  // let author = document.querySelector(".author");
-  let dot2 = document.querySelector(".dot_animation1");
 
-  tl5.to(dot2, {
-    scale: 2,
-  });
-  let tl6 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".excerpt1",
-      start: "bottom bottom",
-      end: "center center", 
-      scrub: true,
-      scrub: true,
-      pin: false,
-      opacity: 1,
-      zIndex: 100,
-      pinSpacing: false,
-      onComplete: function () {
-        tl7.play(); // Start the next timeline when tl6 is complete
-      },
-    },
-  });
-  
-  let tl7 = gsap.timeline({
-    paused: true, // Set the timeline to initially paused
-    scrollTrigger: {
-      trigger: ".excerpt2",
-      start: "bottom bottom",
-      end: "center center", 
-      scrub: true,
-      pin: false,
-      opacity: 1,
-      zIndex: 100,
-      pinSpacing: false,
-      onComplete: function () {
-        tl8.play(); // Start the next timeline when tl7 is complete
-      },
-    },
-  });
-  
-  let tl8 = gsap.timeline({
-    paused: true, // Set the timeline to initially paused
-    scrollTrigger: {
-      trigger: ".excerpt3",
-      start: "bottom bottom",
-      end: "center center", 
-      scrub: true,
-      pin: false,
-      opacity: 1,
-      zIndex: 100,
-      pinSpacing: false,
-      onComplete: function () {
-        tl9.play(); // Start the next timeline when tl8 is complete
-      },
-    },
-  });
-  
-  let tl9 = gsap.timeline({
-    paused: true, // Set the timeline to initially paused
-    scrollTrigger: {
-      trigger: ".excerpt4",
-      start: "bottom bottom",
-      end: "center center", 
-      scrub: true,
-      pin: false,
-      opacity: 1,
-      zIndex: 100,
-      pinSpacing: false,
-    },
-  });
-  
-  let excerpt1 = document.querySelector(".excerpt1");
-  let excerpt2 = document.querySelector(".excerpt2");
-  let excerpt3 = document.querySelector(".excerpt3");
-  let excerpt4 = document.querySelector(".excerpt4");
-  
-  tl6.to(excerpt1, {
-    opacity: 1,
-  });
-  
-  tl7.to(excerpt2, {
-    opacity: 1,
-  });
-  
-  tl8.to(excerpt3, {
-    opacity: 1,
-  });
-  
-  tl9.to(excerpt4, {
-    opacity: 1,
-  });
+
 
   let bg_scroll = document.querySelector(".scroll_pane");
   let circ_scroll = document.querySelector(".circle_scroll");
@@ -269,35 +443,30 @@ const tl1 = gsap.timeline({
   let arrow2 = document.querySelector(".arrow2");
   let arrow3 = document.querySelector(".arrow3");
 
-  // let tl11 = gsap.timeline({
-  //   scrollTrigger: {
-  //     trigger: ".scroller1",
-  //     start: "center center",
-  //     end: "+=100%",
-  //     scrub: false,
-  //     pin: true,
-  //     opacity: 1,
-  //     zIndex:100,
-  //     pinSpacing: false,
-  //   },
-  // });
+  let tl11 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".scroller1",
+      start: "center center",
+      end: "+=100%",
+      pin: true,
+      zIndex:100,
+    },
+  });
   tl11.to(arrow1, {
     display: "block",
   });
 
-  // tl11.to(bg_scroll, {
-  //   backgroundColor: "rgb(43, 73, 172)",
-  // }).to(circ_scroll, {
+  //.to(circ_scroll, {
   //   backgroundColor: "rgb(253,190,15)",
   // }).to(arrow1, {
   //   display: "none",
   // }).to(arrow2, {
   //   display: "block",
   // }); 
-  tl11.to(arrow1, {
-    display: "block",
-    duration: 0,
-  });
+  // tl11.to(arrow1, {
+  //   display: "block",
+  //   duration: 0,
+  // });
   
   // tl11.to(arrow1, {
   //   display: "block",
@@ -330,6 +499,8 @@ const tl1 = gsap.timeline({
   // });
   console.log("TEST");
 
+
+ // CH3 ANIMATION
   let tl10 = gsap.timeline({
     scrollTrigger: {
       trigger: ".comp1",
