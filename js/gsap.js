@@ -186,20 +186,20 @@ tl9.to(excerpt4, {
   let tl16 = gsap.timeline({
     scrollTrigger: {
       trigger: ".briones",
-      start: "top top",
-      end: "+=10%",
+      start: "top bottom",
+      end: "+=40%",
       scrub: true,
       pin: false,
       opacity: 1,
-      zIndex:100,
+      zIndex: 100,
       pinSpacing: false,
     },
   });
   
-  // let author = document.querySelector(".author");
   let briones = document.querySelector(".briones");
   tl16.to(".briones", {
-    y: "-80vh",
+    y: "-150vh",
+    ease: "power2.out", // Add the easing effect (in this case, power2.out)
   });
 
   tl15.add('start')
@@ -212,25 +212,7 @@ tl9.to(excerpt4, {
     delay: 0,
   }, 'start');
   //pandemic animation
-  let tl17 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".pandemic",
-      start: "top top",
-      end: "+=10%",
-      scrub: true,
-      pin: false,
-      opacity: 1,
-      zIndex:100,
-      pinSpacing: false,
-    },
-  });
-  
-  // let author = document.querySelector(".author");
-  let pandemic = document.querySelector(".pandemic");
-  tl16.to(".pandemic", {
-    scale: 1.5,
-    rotation: 180,
-  });
+
 // CARDS
 const tl1 = gsap.timeline({
     scrollTrigger: {
@@ -443,18 +425,18 @@ const tl1 = gsap.timeline({
   let arrow2 = document.querySelector(".arrow2");
   let arrow3 = document.querySelector(".arrow3");
 
-  let tl11 = gsap.timeline({
-    scrollTrigger: {
-      trigger: ".scroller1",
-      start: "center center",
-      end: "+=100%",
-      pin: true,
-      zIndex:100,
-    },
-  });
-  tl11.to(arrow1, {
-    display: "block",
-  });
+  // let tl11 = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".scroller1",
+  //     start: "center center",
+  //     end: "+=100%",
+  //     pin: true,
+  //     zIndex:100,
+  //   },
+  // });
+  // tl11.to(arrow1, {
+  //   display: "block",
+  // });
 
   //.to(circ_scroll, {
   //   backgroundColor: "rgb(253,190,15)",
@@ -535,3 +517,23 @@ const tl1 = gsap.timeline({
     ease: "power2.out",
   })
   .set(dot_animation3, { zIndex: 0 }); // Reset z-index of dot_animation3
+  
+  
+  
+  // let tl18 = gsap.timeline({
+  //   scrollTrigger: {
+  //     trigger: ".dot_1",
+  //     start: "center center",
+  //     end: "+=100%",
+  //     scrub: true,
+  //     pin: false,
+  //     opacity: 1,
+  //     zIndex:100,
+  //     pinSpacing: false,
+  //   },
+  // });
+  // let dot_1 = document.querySelector(".dot_1");
+  
+  // tl18.to(dot_1, {
+  //   scale: "0.2",
+  // });

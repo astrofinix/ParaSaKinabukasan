@@ -25,6 +25,9 @@ body {
   perspective: 1px;
   transform-style: preserve-3d; */
 }
+.white_bg {
+  background-color: var(--white);
+}
 #sideNav {
   width: 30vw;
   height: 100vh;
@@ -610,15 +613,24 @@ svg {
   opacity: 1;
 }
 .ch1_1_excerpt {
+  background-color: var(--yellow);
+  width: 50vw;
+  padding: 5vw;
+  font-size: 2vw;
+}
+.prob_excerpt {
+  z-index: 100;
+  position: absolute;
+  top: 20vh;
   width: 50vw;
   padding: 5vw;
   font-size: 2vw;
 }
 .separator13 {
   /* position: relative; */
-  height: 100vh;
+  height: 20vh;
   width: auto;
-  background-color: var(--white);
+  background-color: var(--yellow);
   opacity: 1;
 }
 .separator_animation2 {
@@ -648,8 +660,9 @@ svg {
   opacity: 0;
 }
 .excerpt1_1 {
+  width: 60vw;
   font-size: 3vw;
-  padding-top: 50vh;
+  padding-top: 100vh;
   padding-left: 10vw;
   padding-right: 10vw;
   text-align: center;
@@ -657,6 +670,9 @@ svg {
   font-weight: 900;
   color: black;
   z-index: 5000 !important;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .excerpt2 {
   font-size: 3vw;
@@ -669,6 +685,7 @@ svg {
   z-index: 5000 !important;
   opacity: 0;
 }
+
 .excerpt3 {
   font-size: 3vw;
   padding-top: 8vh;
@@ -699,8 +716,17 @@ svg {
   color: var(--black) !important;
 }
 .credit_wallpaper {
+  position: relative;
   width: 100%;
   height: auto;
+  z-index: 900 !important;
+}
+.typhoon_wallpaper {
+  margin-top: 20vh;
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 30 !important;
 }
 .disclaimer {
   display: flex;
@@ -808,6 +834,13 @@ svg {
   width: 100%;
   padding: 1vw;
   /* position: relative; */
+  display: block;
+}
+.two_col1 {
+  width: 100%;
+  padding: 1vw;
+  /* position: relative; */
+  background-color: var(--white);
   display: block;
 }
 .comp1 {
@@ -966,6 +999,11 @@ a {
   padding-top: 10vh;
   padding-bottom: 10vh;
 }
+.outro_ch1 {
+  position: relative;
+  width: 100%;
+  height: 120vh;
+}
 .webview-intro {
   display: flex;
   justify-content: center;
@@ -1003,12 +1041,11 @@ a {
   position: absolute;
   margin-top: 0vh;
   grid-area: main;
-  width: 20vw;
-  height: 20vw;
+  width: 150vw;
+  height: 150vw;
   border-radius: 50%;
   background-color: rgb(255, 194, 0);
-  z-index: 30;
-  opacity: 1;
+  z-index: -1;
   display: block;
 }
 .dot {
@@ -1687,7 +1724,7 @@ a {
   inset: 0;
   color: var(--black);
   padding: 20px;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 .card2 {
   width: 25vw;
@@ -1697,7 +1734,7 @@ a {
   inset: 0;
   color: var(--black);
   padding: 20px;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 .card3 {
   width: 25vw;
@@ -1707,7 +1744,7 @@ a {
   inset: 0;
   color: var(--black);
   padding: 20px;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 .card4 {
   width: 25vw;
@@ -1717,7 +1754,7 @@ a {
   inset: 0;
   color: var(--black);
   padding: 20px;
-  font-size: 2vw;
+  font-size: 1.7vw;
 }
 .card_container {
   display: block;
@@ -1831,6 +1868,7 @@ a {
   width: 100vw;
   transform: scale(0.5);
   position: absolute;
+  z-index: 600;
 }
 .layer0 {
   z-index: -2;
@@ -1841,11 +1879,11 @@ a {
   position: relative !important;
 }
 .layer0_1 {
-  z-index: -2;
+  z-index: 700;
 }
 .layer1_1 {
   left: -auto;
-  z-index: -2;
+  z-index: 700;
   margin-left: -0.85%;
   position: relative !important;
 }
@@ -1855,7 +1893,7 @@ a {
   /* height: 300vh; */
 }
 .chapter1_1 {
-  background-color: var(--white);
+  background-color: var(--yellow);
   display: block;
 }
 .chapter1_2 {
@@ -2065,7 +2103,7 @@ a {
 .body-text {
   height: 100vh;
 }
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 10px;
 }
 
@@ -2079,7 +2117,7 @@ a {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   background: rgb(255, 194, 0);
-}
+} */
 
 .block_question {
   width: 100%;
@@ -2237,12 +2275,12 @@ a {
   padding: 10vh;
   display: flex;
   height: 100vh;
-  width: 300vw;
+  width: 160vw;
   position: relative;
   background-color: var(--yellow);
 }
 .div2 div {
-  width: 40vw;
+  width: 50vw;
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -2413,6 +2451,18 @@ padding-bottom: 5vw;
   height: 120vh;
   background-color: var(--yellow);
 }
+.ch1_2_outro {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+  padding-top: 50vh;
+}
+.ch1_2_fin {
+  width: 100%;
+  height: 180vh;
+  background-color: var(--green);
+  padding-top: 5vh;
+}
 .results {
   width: 100%;
   height: 100vh;
@@ -2429,6 +2479,15 @@ padding-bottom: 5vw;
   padding: 5vw;
   font-size: 2.5vw;
 }
+.fin_col1 {
+  float: left;
+  width: 30%;
+  height: 80vh;
+  padding: 5vw;
+  font-size: 1.5vw;
+  font-style: italic;
+  font-weight: 700;
+}
 .pisa_col1 {
   float: left;
   width: 50%;
@@ -2441,10 +2500,30 @@ padding-bottom: 5vw;
   width: 20%;
   height: 100vh;
 }
+.fin_col2 {
+  float: left;
+  padding-top: 5vw;
+  width: 50%;
+  height: 100vh;
+  font-size: 2vw;
+}
+.congress {
+  border-radius: 2rem;
+  float: left;
+  width: 35vw;
+  margin-top: 10vh;
+}
+.edcom {
+  border-radius: 2rem;
+  float: left;
+  width: 50vw;
+  margin-top: 10vh;
+}
 .italy_painting {
   padding-top: 5vw;
   width: 30vw;
 }
+
 .docu_img {
   width: 28vw;
   height: 70vh;
@@ -2453,12 +2532,18 @@ padding-bottom: 5vw;
   margin-right: 1vw;
   object-fit: cover;
 }
+.docu_img2 {
+  width: 40vw;
+  height: 70vh;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  object-fit: cover;
+}
 .documentaries {
   width: 100%;
   height: 100vh;
 }
 .quote_transition {
-  padding-top: 5vw;
   background-color: var(--white);
   width: 100%;
   height: 200vh;
@@ -2467,27 +2552,42 @@ padding-bottom: 5vw;
 .briones_quote {
   width: 100%;
 }
+.static_quote {
+  width: 100%;
+}
 .briones {
-  top: 60vh;
+  top: 100vh;
   position: absolute;
   width: 100%;
 }
 .crisis_animation {
-  width: 200%;
-  height: 100vh;
+  width: 100%;
+  height: 300vh;
   background-color: var(--white);
 }
-/* .crisis {
-  display: block;
+.crisis {
+  width: 100vw;
+  display: none;
+  padding-top: 10vh;
   margin-left: auto;
   margin-right: auto;
-} */
-.pandemic {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+}
+.pandemic_img {
   width: 10%;
-  transform: rotate(180deg);
+  transform: rotate(0deg);
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+  /* animation: rotateAnimation1 1s forwards; */
+}
+@keyframes rotateAnimation1 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    width: 100%;
+  }
 }
 .docu_img1 {
   width: 28vw;

@@ -149,7 +149,7 @@ var horizontalSlide = new TimelineMax()
 
 new ScrollMagic.Scene({
   triggerElement: ".div2",
-  duration: "350%",
+  duration: "160%",
   offset: 0,
   triggerHook: -0.02
 })
