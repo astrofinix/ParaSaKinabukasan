@@ -827,6 +827,14 @@ svg {
   text-align: center;
   height: 100vh; /* Adjust the height as needed */
 }
+.full-view {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh; /* Adjust the height as needed */
+}
 .par1 {
   padding-top: 3vh;
   padding-left: 50vw;
@@ -1957,7 +1965,7 @@ a {
   background-color: var(--black);
 }
 .chapter2_1 {
-  height: 1325vh;
+  height: 1125vh;
   background-color: var(--white);
 }
 .chapter2_2 {
@@ -2042,9 +2050,16 @@ a {
   background-position: 50% 50%;
 }
 .second-wrap {
-  height: 20%;
+  height: 60vh;
   width: 100vw;
   background: #ffffff url("../img/comlab.jpg") no-repeat fixed;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+.fourth-wrap {
+  height: 60vh;
+  width: 100vw;
+  background: #ffffff url("../img/ceremony.jpg") no-repeat fixed;
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -2474,7 +2489,7 @@ a {
 .ph_map {
   padding-bottom: 5vw;
   position: relative;
-  width: 30vw;
+  width: 25vw;
 }
 .scroll_pane {
   background-color: rgb(33, 132, 35);

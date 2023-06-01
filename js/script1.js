@@ -23,6 +23,7 @@ if (
   document.getElementById("navbar_logo").style.display = "block";
   document.getElementById("sideNav").style.display = "block";
   // For non-mobile devices, do nothing
+  
 }
 
 var menuBtn = document.getElementById("menuBtn");
